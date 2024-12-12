@@ -8,6 +8,32 @@ public class MyWorld extends World
     }
     public void prepare()
     {
+        addNah(180,100);
+        addNah(220,100);
+        addNah(300,100);
+        addNah(380,100);
+        addNah(460,100);
+        addNah(220,140);
+        addNah(340,140);
+        addNah(380,140);
+        addNah(460,140);
+        addNah(140,180);
+        addNah(140,220);
+        addNah(180,220);
+        addNah(260,220);
+        addNah(340,220);
+        addNah(380,220);
+        addNah(460,220);
+        addNah(220,260);
+        addNah(340,260);
+        addNah(380,260);
+        addNah(420,260);
+        addNah(180,300);
+        addNah(220,300);
+        addNah(260,300);
+        addNah(380,300);
+        addNah(420,300);
+        addNah(500,300);
         for(int i=0;i<11;i++)
         {
             addWall(100+i*40,100);
@@ -98,5 +124,10 @@ public class MyWorld extends World
         c.scale(40,40);
         b.setImage(c);
         addObject(b,x,y);
+    }
+    public void addNah(int x,int y)
+    {
+        nah a=new nah();
+        addObject(a,x,y);
     }
 }

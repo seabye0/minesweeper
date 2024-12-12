@@ -1,5 +1,9 @@
 #BlueJ class context
 comment0.target=player
-comment1.params=
-comment1.target=void\ act()
-numComments=2
+comment1.params=nah
+comment1.target=int\ xwall(greenfoot.Actor)
+comment2.params=nah
+comment2.target=int\ ywall(greenfoot.Actor)
+comment3.params=
+comment3.target=void\ act()
+numComments=4
