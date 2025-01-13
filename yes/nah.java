@@ -15,12 +15,6 @@ public class nah extends Actor
     }
     public void act()
     {
-        Actor nah;
-        MyWorld world=(MyWorld) getWorld();
-        nah b = (nah) world.getObjects(nah.class).get(0);
-        if (b != null && b.touchingWall())
-        {
-            world.removeObjects(world.getObjectsAt(xwall(nah.class), ywall(nah.class), wall.class));
-        }
+        
     }
 }
