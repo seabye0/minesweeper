@@ -93,6 +93,10 @@ public class player extends Actor
                 }
             }
         }
+        else
+        {
+                
+        }
         finish = getOneObjectAtOffset(0,0,finish.class);
         if(finish!=null)
         {
