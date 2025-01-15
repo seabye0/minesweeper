@@ -3,14 +3,6 @@ public class player extends Actor
 {
     int ok=1;
     int i=0;
-    public int xwall(Actor nah)
-    {
-        return nah.getX();
-    }
-    public int ywall(Actor nah)
-    {
-        return nah.getY();
-    }
     public void act()
     {
         Actor wall;
@@ -67,7 +59,6 @@ public class player extends Actor
                 wall = getOneObjectAtOffset(40,0,wall.class);
                 finish = getOneObjectAtOffset(40,0,finish.class);
                 nah = getOneObjectAtOffset(40,0,nah.class);
-                outside = getOneObjectAtOffset(40,0,outside.class);
                 if(wall!=null||finish!=null)
                 {
                     if(nah==null)
@@ -87,7 +78,6 @@ public class player extends Actor
                 wall = getOneObjectAtOffset(-40,0,wall.class);
                 finish = getOneObjectAtOffset(-40,0,finish.class);
                 nah = getOneObjectAtOffset(-40,0,nah.class);
-                outside = getOneObjectAtOffset(-40,0,outside.class);
                 if(wall!=null||finish!=null)
                 {
                     if(nah==null)

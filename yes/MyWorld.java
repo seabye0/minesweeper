@@ -58,41 +58,6 @@ public class MyWorld extends World
         {
             addWall(100+i*40,300);
         }
-        for(int i=0;i<15;i++)
-        {
-            addOutside(20+i*40,20);
-        }
-        for(int i=0;i<15;i++)
-        {
-            addOutside(20+i*40,60);
-        }
-        for(int i=0;i<15;i++)
-        {
-            if(i!=2)
-            {
-                addOutside(20+i*40,340);
-            }
-        }
-        for(int i=0;i<15;i++)
-        {
-            addOutside(20+i*40,380);
-        }
-        for(int i=2;i<8;i++)
-        {
-            addOutside(20,20+i*40);
-        }
-        for(int i=2;i<8;i++)
-        {
-            addOutside(60,20+i*40);
-        }
-        for(int i=3;i<8;i++)
-        {
-            addOutside(540,20+i*40);
-        }
-        for(int i=2;i<8;i++)
-        {
-            addOutside(580,20+i*40);
-        }
         finish w = new finish();
         GreenfootImage c = w.getImage();
         c.scale(40,40);
@@ -112,14 +77,6 @@ public class MyWorld extends World
     public void addWall(int x,int y)
     {
         wall b=new wall();
-        GreenfootImage c = b.getImage();
-        c.scale(40,40);
-        b.setImage(c);
-        addObject(b,x,y);
-    }
-    public void addOutside(int x,int y)
-    {
-        outside b=new outside();
         GreenfootImage c = b.getImage();
         c.scale(40,40);
         b.setImage(c);
