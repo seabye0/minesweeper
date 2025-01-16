@@ -1,11 +1,5 @@
 #BlueJ class context
 comment0.target=nah
 comment1.params=
-comment1.target=boolean\ touchingWall()
-comment2.params=nah
-comment2.target=int\ xwall(greenfoot.Actor)
-comment3.params=nah
-comment3.target=int\ ywall(greenfoot.Actor)
-comment4.params=
-comment4.target=void\ act()
-numComments=5
+comment1.target=void\ act()
+numComments=2

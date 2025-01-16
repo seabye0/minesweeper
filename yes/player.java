@@ -8,11 +8,8 @@ public class player extends Actor
         Actor wall;
         Actor finish;
         Actor nah;
-        Actor outside;
         MyWorld world=(MyWorld) getWorld();
         world.showText("Resets: "+i,50,25);
-        int playerWidth=getImage().getWidth()/2;
-        int playerHeight=getImage().getHeight()/2;
         if(ok==1)
         {
             String key = Greenfoot.getKey();
@@ -26,6 +23,7 @@ public class player extends Actor
                     if(nah==null)
                     {
                         setLocation(getX(),getY()-40);
+                        setRotation(0);
                     }
                     else
                     {
@@ -45,6 +43,7 @@ public class player extends Actor
                     if(nah==null)
                     {
                         setLocation(getX(),getY()+40);
+                        setRotation(180);
                     }
                     else
                     {
@@ -64,6 +63,7 @@ public class player extends Actor
                     if(nah==null)
                     {
                         setLocation(getX()+40,getY());
+                        setRotation(90);
                     }
                     else
                     {
@@ -83,6 +83,7 @@ public class player extends Actor
                     if(nah==null)
                     {
                         setLocation(getX()-40,getY());
+                        setRotation(-90);
                     }
                     else
                     {
@@ -93,14 +94,36 @@ public class player extends Actor
                 }
             }
         }
-        else
-        {
-                
-        }
         finish = getOneObjectAtOffset(0,0,finish.class);
         if(finish!=null)
         {
             ok=0;
+            world.addNah(180,100);
+            world.addNah(220,100);
+            world.addNah(300,100);
+            world.addNah(380,100);
+            world.addNah(460,100);
+            world.addNah(220,140);
+            world.addNah(340,140);
+            world.addNah(380,140);
+            world.addNah(460,140);
+            world.addNah(140,180);
+            world.addNah(140,220);
+            world.addNah(180,220);
+            world.addNah(260,220);
+            world.addNah(340,220);
+            world.addNah(380,220);
+            world.addNah(460,220);
+            world.addNah(220,260);
+            world.addNah(340,260);
+            world.addNah(380,260);
+            world.addNah(420,260);
+            world.addNah(180,300);
+            world.addNah(220,300);
+            world.addNah(260,300);
+            world.addNah(380,300);
+            world.addNah(420,300);
+            world.addNah(500,300);
         }
     }
 }
