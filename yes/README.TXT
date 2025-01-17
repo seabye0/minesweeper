@@ -4,9 +4,9 @@ Tell the reader (someone who does not know anything about this project)
 all they need to know. The comments should usually include at least:
 ------------------------------------------------------------------------
 
-PROJECT TITLE:
-PURPOSE OF PROJECT:
-VERSION or DATE:
-HOW TO START THIS PROJECT:
-AUTHORS:
-USER INSTRUCTIONS:
+PROJECT TITLE: "THE RECON BUG"
+PURPOSE OF PROJECT:Greenfoot
+VERSION: 1.0
+HOW TO START THIS PROJECT: Press "PLAY"
+AUTHORS:seabye0 and MihaTeka
+USER INSTRUCTIONS:Use "←↑↓→" to move
