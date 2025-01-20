@@ -98,32 +98,6 @@ public class player extends Actor
         if(finish!=null)
         {
             ok=0;
-            world.addNah(180,100);
-            world.addNah(220,100);
-            world.addNah(300,100);
-            world.addNah(380,100);
-            world.addNah(460,100);
-            world.addNah(220,140);
-            world.addNah(340,140);
-            world.addNah(380,140);
-            world.addNah(460,140);
-            world.addNah(140,180);
-            world.addNah(140,220);
-            world.addNah(180,220);
-            world.addNah(260,220);
-            world.addNah(340,220);
-            world.addNah(380,220);
-            world.addNah(460,220);
-            world.addNah(220,260);
-            world.addNah(340,260);
-            world.addNah(380,260);
-            world.addNah(420,260);
-            world.addNah(180,300);
-            world.addNah(220,300);
-            world.addNah(260,300);
-            world.addNah(380,300);
-            world.addNah(420,300);
-            world.addNah(500,300);
         }
     }
 }
