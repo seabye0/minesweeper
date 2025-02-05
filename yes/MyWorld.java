@@ -1,17 +1,21 @@
-import greenfoot.*;
+import greenfoot.*;  // Importing the Greenfoot library
+
+// MyWorld class, which extends Greenfoot's World class
 public class MyWorld extends World
 {
+    // Constructor for MyWorld
     public MyWorld()
     {
-        super(600, 400, 1); 
-        prepare();
+        // Create a new world with 600x400 pixels and a cell size of 1x1 pixels
+        super(600, 400, 1);  
+        prepare();  // Call the prepare method to set up the world
     }
+
+    // Method to set up the initial objects in the world
     public void prepare()
     {
-        /*
-        Adding the secret walls that will teleport
-        the player back to the start.
-        */
+        // Adding hidden secret walls before placing visible walls
+        // These will teleport the player if they step on them
         addSecret(180,100);
         addSecret(220,100);
         addSecret(300,100);
@@ -38,64 +42,69 @@ public class MyWorld extends World
         addSecret(380,300);
         addSecret(420,300);
         addSecret(500,300);
-        /*
-        adding the grid over the walls so they cannot be seen.
-        */
-        for(int i=0;i<11;i++)
+
+        // Adding visible walls that will hide the secret walls
+        for(int i=0; i<11; i++)
         {
-            addWall(100+i*40,100);
+            addWall(100 + i * 40, 100);
         }
-        for(int i=0;i<11;i++)
+        for(int i=0; i<11; i++)
         {
-            addWall(100+i*40,140);
+            addWall(100 + i * 40, 140);
         }
-        for(int i=0;i<11;i++)
+        for(int i=0; i<11; i++)
         {
-            addWall(100+i*40,180);
+            addWall(100 + i * 40, 180);
         }
-        for(int i=0;i<11;i++)
+        for(int i=0; i<11; i++)
         {
-            addWall(100+i*40,220);
+            addWall(100 + i * 40, 220);
         }
-        for(int i=0;i<11;i++)
+        for(int i=0; i<11; i++)
         {
-            addWall(100+i*40,260);
+            addWall(100 + i * 40, 260);
         }
-        for(int i=0;i<11;i++)
+        for(int i=0; i<11; i++)
         {
-            addWall(100+i*40,300);
+            addWall(100 + i * 40, 300);
         }
-        /*
-        Changing the size of the finish line photo.
-        Adding the finish line.
-        */
+
+        // Creating and adding the finish object (goal)
         finish w = new finish();
         GreenfootImage c = w.getImage();
-        c.scale(40,40);
+        c.scale(40,40);  // Resizing the finish object image
         w.setImage(c);
-        addObject(w,540,100);
+        addObject(w, 540, 100);  // Placing finish at (540, 100)
+
+        // Creating and adding the start object
         start q = new start();
         c = q.getImage();
-        c.scale(40,40);
+        c.scale(40,40);  // Resizing the start object image
         q.setImage(c);
-        addObject(q,100,340);
-        player a=new player();
+        addObject(q, 100, 340);  // Placing start at (100, 340)
+
+        // Creating and adding the player object
+        player a = new player();
         c = a.getImage();
-        c.scale(32,40);
+        c.scale(32,40);  // Resizing the player object image
         a.setImage(c);
-        addObject(a,100,340);
+        addObject(a, 100, 340);  // Placing player at (100, 340)
     }
-    public void addWall(int x,int y)
+
+    // Method to add a wall object at the given coordinates
+    public void addWall(int x, int y)
     {
-        wall b=new wall();
+        wall b = new wall();
         GreenfootImage c = b.getImage();
-        c.scale(40,40);
+        c.scale(40,40);  // Resizing the wall image
         b.setImage(c);
-        addObject(b,x,y);
+        addObject(b, x, y);  // Adding the wall to the world
     }
-    public void addSecret(int x,int y)
+
+    // Method to add a secret teleporting wall at the given coordinates
+    public void addSecret(int x, int y)
     {
-        secret a=new secret();
-        addObject(a,x,y);
+        secret a = new secret();
+        addObject(a, x, y);  // Adding the secret wall to the world (hidden under normal walls)
     }
 }
