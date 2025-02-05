@@ -1,16 +1,16 @@
-import greenfoot.*;  // Importing Greenfoot library
+import greenfoot.*; 
 
-// Quit button class that extends Actor, allowing interaction with the world
+// Clasa "quit" cextinde Actor
+//este codul pentru butonul de ieșire din joc
 public class quit extends Actor
 {
-    // Act method is called repeatedly in each frame
     public void act()
     {
-        // Check if this button has been clicked by the mouse
+        // Verifică dacă butonul a fost apăsat de utilizator cu mouse-ul
         if (Greenfoot.mouseClicked(this))
         {
-            // If clicked, stop the Greenfoot simulation (quit the game)
+            // Dacă butonul a fost apăsat, oprește simularea și închide jocul
             Greenfoot.stop();
-        }
-    }
+        }
+    }
 }
