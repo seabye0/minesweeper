@@ -1,16 +1,17 @@
-import greenfoot.*;  // Importing Greenfoot library
+import greenfoot.*; 
 
-// How button class that extends Actor, allowing interaction with the world
+// Clasa "how" extinde Actor
+// acesta este codul pentru butonul care deschide panoul cu instrucțiuni (how to play)
 public class how extends Actor
 {
-    // Act method is called repeatedly in each frame
+    
     public void act()
     {
-        // Check if this button has been clicked by the mouse
+        // dacă acest buton a fost apăsat de utilizator cu mouse-ul
         if (Greenfoot.mouseClicked(this))
         {
-            // If clicked, change the world to the "howtoplay" world (go to the instructions)
+            // schimbă lumea la "howtoplay", care conține instrucțiunile jocului
             Greenfoot.setWorld(new howtoplay());
-        }
-    }
+        }
+    }
 }
