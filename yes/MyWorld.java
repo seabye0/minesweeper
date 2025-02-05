@@ -8,32 +8,33 @@ public class MyWorld extends World
     }
     public void prepare()
     {
-        addNah(180,100);
-        addNah(220,100);
-        addNah(300,100);
-        addNah(380,100);
-        addNah(460,100);
-        addNah(220,140);
-        addNah(340,140);
-        addNah(380,140);
-        addNah(460,140);
-        addNah(140,180);
-        addNah(140,220);
-        addNah(180,220);
-        addNah(260,220);
-        addNah(340,220);
-        addNah(380,220);
-        addNah(460,220);
-        addNah(220,260);
-        addNah(340,260);
-        addNah(380,260);
-        addNah(420,260);
-        addNah(180,300);
-        addNah(220,300);
-        addNah(260,300);
-        addNah(380,300);
-        addNah(420,300);
-        addNah(500,300);
+        //I add the secret walls that will teleport the player back.
+        addSecret(180,100);
+        addSecret(220,100);
+        addSecret(300,100);
+        addSecret(380,100);
+        addSecret(460,100);
+        addSecret(220,140);
+        addSecret(340,140);
+        addSecret(380,140);
+        addSecret(460,140);
+        addSecret(140,180);
+        addSecret(140,220);
+        addSecret(180,220);
+        addSecret(260,220);
+        addSecret(340,220);
+        addSecret(380,220);
+        addSecret(460,220);
+        addSecret(220,260);
+        addSecret(340,260);
+        addSecret(380,260);
+        addSecret(420,260);
+        addSecret(180,300);
+        addSecret(220,300);
+        addSecret(260,300);
+        addSecret(380,300);
+        addSecret(420,300);
+        addSecret(500,300);
         for(int i=0;i<11;i++)
         {
             addWall(100+i*40,100);
@@ -82,9 +83,9 @@ public class MyWorld extends World
         b.setImage(c);
         addObject(b,x,y);
     }
-    public void addNah(int x,int y)
+    public void addSecret(int x,int y)
     {
-        nah a=new nah();
+        secret a=new secret();
         addObject(a,x,y);
     }
 }
