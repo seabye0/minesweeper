@@ -1,23 +1,25 @@
-import greenfoot.*;  // Importing Greenfoot library
+import greenfoot.*;  
 
-// The howtoplay world class that extends World, displaying the instructions screen for the game
+// Clasa "howtoplay" extinde World
+// acest cod este pentru ecranul de instrucțiuni al jocului, in timp ce cel anterior a fost doar pentru buton
 public class howtoplay extends World
 {
-    // Constructor for the howtoplay world, initializes the world with size 600x400 and cell size 1
+    // constructorul pentru ecranul "howtoplay"
+    // inițializăm lumea cu dimensiunea 600x400 și celule de 1x1 pixel
     public howtoplay()
     {    
-        super(600, 400, 1);
-        prepare();  // Prepare the world (add the "Back" button)
+        super(600, 400, 1); 
+        prepare();  // Apelează metoda prepare pentru a adăuga butonul "Back"
     }
     
-    // Method to add objects (buttons) to the world
+    // Metodă pentru a adăuga obiecte în lume (butoane)
     public void prepare()
     {
-        // Create and add the "Back" button
-        back b = new back();
-        GreenfootImage c = b.getImage();  // Get the image for the back button
-        c.scale(90, 30);  // Scale the image to 90x30 pixels
-        b.setImage(c);  // Set the resized image to the button
-        addObject(b, 90, 350);  // Add the button to the world at the specified coordinates (90, 350)
-    }
+        // Crearea și adăugarea butonului "Back"
+        back b = new back();  // creăm un nou obiect de tip back (înapoi)
+        GreenfootImage c = b.getImage();  // obținem imaginea butonului
+        c.scale(90, 30);  // o redimensionăm la 90x30 pixeli
+        b.setImage(c);  // aplicăm imaginea redimensionată butonului
+        addObject(b, 90, 350);  // plasăm butonul în lume la coordonatele (90, 350)
+    }
 }
