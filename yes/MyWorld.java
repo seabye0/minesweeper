@@ -1,21 +1,21 @@
-import greenfoot.*;  // Importing the Greenfoot library
+import greenfoot.*;  // am importat biblioteca Greenfoot pentru a lucra cu lumea și obiectele
 
-// MyWorld class, which extends Greenfoot's World class
+// Clasa MyWorld extinde clasa World din Greenfoot
+// Clasa MyWorld definește mediul de joc și inițializează obiectele din lume
 public class MyWorld extends World
 {
-    // Constructor for MyWorld
+    // apelăm Constructorul MyWorld când lumea este creată
     public MyWorld()
     {
-        // Create a new world with 600x400 pixels and a cell size of 1x1 pixels
+        // creăm lumea cu dimensiunea de 600x400 pixeli și celule de 1x1 pixel
         super(600, 400, 1);  
-        prepare();  // Call the prepare method to set up the world
+        prepare();  // prin apelarea metodei prepare adăugăm obiectele inițiale în lume
     }
 
-    // Method to set up the initial objects in the world
+    //configurarea inițială a lumii, adăugând pereți, casete invizibile, punctul de start și finish
     public void prepare()
     {
-        // Adding hidden secret walls before placing visible walls
-        // These will teleport the player if they step on them
+        // adăugam pereții secreți și dacă jucătorul calcă pe unul, va fi teleportat la start
         addSecret(180,100);
         addSecret(220,100);
         addSecret(300,100);
@@ -43,7 +43,8 @@ public class MyWorld extends World
         addSecret(420,300);
         addSecret(500,300);
 
-        // Adding visible walls that will hide the secret walls
+        // Adăugarea pereților vizibili pentru a construi traseul de joc
+        //adăugam pereții vizibili care definesc traseul, respectiv (unii dintre ei) ascund casetele secrete
         for(int i=0; i<11; i++)
         {
             addWall(100 + i * 40, 100);
@@ -69,42 +70,45 @@ public class MyWorld extends World
             addWall(100 + i * 40, 300);
         }
 
-        // Creating and adding the finish object (goal)
+        // creăm și adăugăm obiectului de finish (ținta finală a jucătorului)
+        // redimensionăm imaginea obiectului finish pentru a se potrivi cu celulele
+        // îl plasăm la coordonatele (540, 100)
         finish w = new finish();
         GreenfootImage c = w.getImage();
-        c.scale(40,40);  // Resizing the finish object image
+        c.scale(40,40);  
         w.setImage(c);
-        addObject(w, 540, 100);  // Placing finish at (540, 100)
+        addObject(w, 540, 100); 
 
-        // Creating and adding the start object
+        // creăm și adăugăm punctul de start pentru jucător
+        // redimensionăm și plasăm la la (100, 340)  imaginea punctului de start
         start q = new start();
         c = q.getImage();
-        c.scale(40,40);  // Resizing the start object image
+        c.scale(40,40); 
         q.setImage(c);
-        addObject(q, 100, 340);  // Placing start at (100, 340)
+        addObject(q, 100, 340); 
 
-        // Creating and adding the player object
+        // la fel și pentru crearea, redimensionarea și plasarea jucatorului (gândăcelului)
         player a = new player();
         c = a.getImage();
-        c.scale(32,40);  // Resizing the player object image
+        c.scale(32,40);  
         a.setImage(c);
-        addObject(a, 100, 340);  // Placing player at (100, 340)
+        addObject(a, 100, 340); 
     }
 
-    // Method to add a wall object at the given coordinates
+    // Metodă pentru adăugarea unui perete vizibil la coordonatele specificate
     public void addWall(int x, int y)
     {
         wall b = new wall();
         GreenfootImage c = b.getImage();
-        c.scale(40,40);  // Resizing the wall image
+        c.scale(40,40);  //redimensionăm imaginea peretului
         b.setImage(c);
-        addObject(b, x, y);  // Adding the wall to the world
+        addObject(b, x, y);  // îl adăugăm la coordonatele x, y
     }
 
-    // Method to add a secret teleporting wall at the given coordinates
+    // Metodă pentru adăugarea unui perete secret (care poate reseta sau teleporta jucătorul)
     public void addSecret(int x, int y)
     {
         secret a = new secret();
-        addObject(a, x, y);  // Adding the secret wall to the world (hidden under normal walls)
-    }
+        addObject(a, x, y);  // îl adăugam la coordnatele x, y
+    }
 }
