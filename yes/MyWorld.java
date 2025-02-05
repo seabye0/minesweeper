@@ -8,7 +8,10 @@ public class MyWorld extends World
     }
     public void prepare()
     {
-        //I add the secret walls that will teleport the player back.
+        /*
+        Adding the secret walls that will teleport
+        the player back to the start.
+        */
         addSecret(180,100);
         addSecret(220,100);
         addSecret(300,100);
@@ -35,6 +38,9 @@ public class MyWorld extends World
         addSecret(380,300);
         addSecret(420,300);
         addSecret(500,300);
+        /*
+        adding the grid over the walls so they cannot be seen.
+        */
         for(int i=0;i<11;i++)
         {
             addWall(100+i*40,100);
@@ -59,6 +65,10 @@ public class MyWorld extends World
         {
             addWall(100+i*40,300);
         }
+        /*
+        Changing the size of the finish line photo.
+        Adding the finish line.
+        */
         finish w = new finish();
         GreenfootImage c = w.getImage();
         c.scale(40,40);
