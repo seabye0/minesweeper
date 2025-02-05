@@ -1,16 +1,17 @@
-import greenfoot.*;  // Importing Greenfoot library
+import greenfoot.*; 
 
-// Back button class that extends Actor, allowing interaction with the world
+// Clasa "back" extinde Actor
+// acesta este codul pentru butonul de întoarcere la meniul principal
 public class back extends Actor
 {
-    // Act method is called repeatedly in each frame
+    
     public void act()
     {
-        // Check if this button has been clicked by the mouse
+        // verificăm dacă acest buton a fost apăsat de utilizator cu mouse-ul
         if (Greenfoot.mouseClicked(this))
         {
-            // If clicked, change the world to the "main" world (go to the main menu)
+            // dacă a fost apăsat, schimbă lumea la meniul principal
             Greenfoot.setWorld(new main());
-        }
-    }
+        }
+    }
 }
