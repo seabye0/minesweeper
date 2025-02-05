@@ -1,16 +1,16 @@
-import greenfoot.*;  // Importing Greenfoot library
+import greenfoot.*;  
 
-// Play button class that extends Actor, allowing interaction with the world
+// Clasa "play" extinde Actor
+// acsta este codul pentru butonul "Play", care începe jocul
 public class play extends Actor
 {
-    // Act method is called repeatedly in each frame
     public void act()
     {
-        // Check if this button has been clicked by the mouse
+        // verificăm dacă butonul a fost apăsat de utilizator cu mouse-ul
         if (Greenfoot.mouseClicked(this))
         {
-            // If clicked, change the world to the "MyWorld" world (start the game)
+            //  schimbă lumea la "MyWorld" (începerea jocului)
             Greenfoot.setWorld(new MyWorld());
-        }
-    }
+        }
+    }
 }
