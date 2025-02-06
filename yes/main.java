@@ -33,6 +33,6 @@ public class main extends World
         c = d.getImage();  
         c.scale(90, 30);  
         d.setImage(c);  
-        addObject(d, 110, 290); 
-    }
+        addObject(d, 110,290);
+    }
 }

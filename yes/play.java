@@ -11,6 +11,6 @@ public class play extends Actor
         {
             //  schimbă lumea la "MyWorld" (începerea jocului)
             Greenfoot.setWorld(new MyWorld());
-        }
-    }
+        }
+    }
 }

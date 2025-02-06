@@ -4,7 +4,6 @@ import greenfoot.*;
 // acesta este codul pentru butonul care deschide panoul cu instrucțiuni (how to play)
 public class how extends Actor
 {
-    
     public void act()
     {
         // dacă acest buton a fost apăsat de utilizator cu mouse-ul
@@ -12,6 +11,6 @@ public class how extends Actor
         {
             // schimbă lumea la "howtoplay", care conține instrucțiunile jocului
             Greenfoot.setWorld(new howtoplay());
-        }
-    }
+        }
+    }
 }

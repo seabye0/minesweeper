@@ -158,6 +158,6 @@ public class player extends Actor
                 world.showText(" ", 50, 25);
                 ok2 = 1;  // Setează variabila pentru a indica afișarea finală
             }
-        }
-    }
+        }
+    }
 }

@@ -11,6 +11,6 @@ public class quit extends Actor
         {
             // Dacă butonul a fost apăsat, oprește simularea și închide jocul
             Greenfoot.stop();
-        }
-    }
+        }
+    }
 }

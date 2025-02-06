@@ -21,5 +21,5 @@ public class howtoplay extends World
         c.scale(90, 30);  // o redimensionăm la 90x30 pixeli
         b.setImage(c);  // aplicăm imaginea redimensionată butonului
         addObject(b, 90, 350);  // plasăm butonul în lume la coordonatele (90, 350)
-    }
+    }
 }

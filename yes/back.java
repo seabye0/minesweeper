@@ -4,7 +4,6 @@ import greenfoot.*;
 // acesta este codul pentru butonul de întoarcere la meniul principal
 public class back extends Actor
 {
-    
     public void act()
     {
         // verificăm dacă acest buton a fost apăsat de utilizator cu mouse-ul
@@ -12,6 +11,6 @@ public class back extends Actor
         {
             // dacă a fost apăsat, schimbă lumea la meniul principal
             Greenfoot.setWorld(new main());
-        }
-    }
+        }
+    }
 }

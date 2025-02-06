@@ -42,7 +42,6 @@ public class MyWorld extends World
         addSecret(380,300);
         addSecret(420,300);
         addSecret(500,300);
-
         // Adăugarea pereților vizibili pentru a construi traseul de joc
         //adăugam pereții vizibili care definesc traseul, respectiv (unii dintre ei) ascund casetele secrete
         for(int i=0; i<11; i++)
@@ -110,5 +109,5 @@ public class MyWorld extends World
     {
         secret a = new secret();
         addObject(a, x, y);  // îl adăugam la coordnatele x, y
-    }
+    }
 }
